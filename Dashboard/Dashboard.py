@@ -1,7 +1,8 @@
+import streamlit as st
+
 # UI Dashboard
 st.set_page_config(page_title="Air Quality Dashboard", layout="wide")
 
-import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
