@@ -1,3 +1,6 @@
+# UI Dashboard
+st.set_page_config(page_title="Air Quality Dashboard", layout="wide")
+
 import streamlit as st
 import pandas as pd
 import seaborn as sns
@@ -7,7 +10,7 @@ import matplotlib.pyplot as plt
 
 def load_data():
     try:
-        df = pd.read_csv('all_data.csv')
+        df = pd.read_csv('Dashboard/all_data.csv')
         return df
     except FileNotFoundError:
         st.error("Data file not found. Please check the file path.")
@@ -26,8 +29,6 @@ def df_create_polutan_by_column(df, column):
         'O3': 'mean',
     })
 
-# UI Dashboard
-st.set_page_config(page_title="Air Quality Dashboard", layout="wide")
 
 #Sidebar column for filter
 with st.sidebar: 
